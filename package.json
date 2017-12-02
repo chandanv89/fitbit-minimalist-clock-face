@@ -1,0 +1,19 @@
+{
+  "fitbit": {
+    "appUUID": "9741ae17-9028-4e44-a5da-a5fee60be203",
+    "appType": "clockface",
+    "appDisplayName": "Iconic",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_user_profile",
+      "access_activity"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Iconic"
+      }
+    }
+  }
+}
