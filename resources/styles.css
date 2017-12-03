@@ -1,13 +1,33 @@
 .background {
-  viewport-fill: #2F4F4F;
+  viewport-fill: #000000;
 }
 
-#myLabel {
+#time {
   font-size: 70;
-  font-family: System-Regular;
+  font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 50%;
-  y: 50%+40;
+  y: 50%+20;
   fill: white;
+}
+
+#date{
+  font-family: System-Regular;
+  font-size: 30;
+  fill: lightgrey;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 25%;
+}
+
+#heartRate{
+  font-family: System-Regular;
+  font-size: 30;
+  fill: red;
+  text-length: 32;
+  text-anchor: middle;
+  x: 58%;
+  y: 85%;
 }
