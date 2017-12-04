@@ -1,3 +1,5 @@
 <svg class="background">
-  <text id="myLabel" />
+  <text id="date" />
+  <text id="time" />
+  <image x="30%" y="73%" width="40" height="40" href="images/heartbeat.png" /><text id="heartRate" />
 </svg>

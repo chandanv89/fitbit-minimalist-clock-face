@@ -1,5 +1,6 @@
 import clock from "clock";
 import document from "document";
+import { HeartRateSensor } from "heart-rate";
 
 import * as util from "../common/utils";
 
@@ -7,16 +8,27 @@ import * as util from "../common/utils";
 clock.granularity = "seconds";
 
 // Get a handle on the <text> element
-let myLabel = document.getElementById("myLabel");
+let date = document.getElementById("date");
+let time = document.getElementById("time");
+let hBpm = document.getElementById("heartRate");
+
+
+var hrm = new HeartRateSensor();
+
+hrm.onreading = function(){
+  //hBpm.text = hrm.heartRate + " BPM";
+  //console.log("Current heart rate: " + hrm.heartRate);
+}
+
+hrm.start();
 
 // Update the <text> element with the current time
 function updateClock() {
   let today = new Date();
-  let hours = today.getHours();
-  let mins = util.zeroPad(today.getMinutes());
-  let secs = util.zeroPad(today.getSeconds());
-
-  myLabel.text = `${hours}:${mins}:${secs}`;
+  
+  date.text = util.getDateString(today);
+  time.text = util.getTimeString(today);
+  hBpm.text = hrm.heartRate + " BPM"; 
 }
 
 // Update the clock every tick event
